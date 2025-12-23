@@ -1,6 +1,6 @@
 # Mini-Wallet Backend Service
 
-## 📌 Overview
+##  Overview
 This project is a backend implementation of a **Mini-Wallet system** that allows users to:
 - Create a wallet account with an initial balance
 - Check account balance
@@ -8,7 +8,7 @@ This project is a backend implementation of a **Mini-Wallet system** that allows
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 - Java 17
 - Spring Boot
 - Spring Data JPA
@@ -19,7 +19,7 @@ This project is a backend implementation of a **Mini-Wallet system** that allows
 
 ---
 
-## ▶️ How to Run the Application Locally
+##  How to Run the Application Locally
 
 ### Prerequisites
 - Java 17
@@ -38,9 +38,9 @@ http://localhost:8080
 
 ---
 
-## 📡 API Endpoints
+##  API Endpoints
 
-### 1️⃣ Create Account
+### 1 Create Account
 **POST** `/wallet/create`
 
 Parameters:
@@ -54,7 +54,7 @@ Example:
 
 ---
 
-### 2️⃣ Get Balance
+### 2️ Get Balance
 **GET** `/wallet/balance/{userId}`
 
 Example:
@@ -64,7 +64,7 @@ Example:
 
 ---
 
-### 3️⃣ Transfer Money
+### 3️ Transfer Money
 **POST** `/wallet/transfer`
 
 Parameters:
@@ -91,14 +91,14 @@ Example:
 
 ---
 
-## 🔗 Data Relationships
+##  Data Relationships
 - Each user has exactly one wallet
 - Wallet balance is stored in the users table
 - One-to-one relationship between user and wallet balance
 
 ---
 
-## 🔐 Data Integrity & Reliability
+##  Data Integrity & Reliability
 - Negative balances are prevented by validation
 - Debit and credit operations are wrapped in a single transaction using @Transactional
 - If any step in a transfer fails, the entire operation is rolled back
@@ -106,7 +106,7 @@ Example:
 
 ---
 
-## 🧪 Testing
+##  Testing
 
 An integration test is included to validate the money transfer functionality.
 
@@ -125,7 +125,7 @@ mvn test
 
 ---
 
-## 🗃 Database Configuration
+##  Database Configuration
 
 ### Default (H2 – Local)
 - In-memory database
@@ -137,7 +137,7 @@ The application can be configured to use PostgreSQL by updating database propert
 
 ---
 
-## ✅ Conclusion
+##  Conclusion
 This project demonstrates a reliable backend solution with:
 - Transactional safety
 - Proper testing
